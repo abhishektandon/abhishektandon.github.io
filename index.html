@@ -4,75 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Tandon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* #007acc, #8a8b8c, #183693, #003153*/
         body {
-            font-family: Arial;
-            
-        }
-        header {
-            background-color: #8a8b8c;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-   
-        .container {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            justify-content: space-between;
+            color: #111;
         }
-        .colored {
-            color: #a21f34;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            color: #000;
         }
-        
+
+        h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.2em;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        .news-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        .news-table td {
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        .news-table td:first-child {
+            width: 120px;
+            color: #666;
+            padding-right: 20px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 24px;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 30px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .publication {
+            margin-bottom: 2em;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .pub-venue {
+            min-width: 80px;
+            padding: 4px 8px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .pub-content {
+            flex: 1;
+        }
+
+        .pub-title {
+            font-weight: 500;
+            margin-bottom: 0.3em;
+        }
+
+        .pub-authors {
+            color: #666;
+            margin-bottom: 0.3em;
+        }
+
+        .pub-links {
+            font-size: 0.9em;
+        }
+
+        .pub-links a {
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="color: white;">ABHISHEK TANDON</h1>
-		<!-- <h2 style="display: inline;">M.Tech. (R) <span class="colored">@</span> IIT Mandi<h2> -->
-		<h2 > M.TECH. (R) @ IIT MANDI</h2>
-    </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a Research Scholar at MANAS Lab, Indian Institute of Technology (IIT) Mandi, Himachal Pradesh, India.
-           <br/>
-		   I am working under the guidance of Dr. Aditya Nigam (Associate Professor, SCEE, IIT Mandi)</p>
-
-		
-        <h2>Education</h2>
-        
-            <div class="container" style="display: flex; margin-top: -20px; margin-bottom: -40px;">
-                <div>M.Tech. (by Research), Computer Science and Engineering - IIT Mandi</div>
-                <div>(Aug'22 - Present)</div>
-            </div>
-
-            <div class="container" style="display: flex; margin-bottom: -20px">
-                <div>B.Tech., Computer Science and Engineering - KNIT Sultanpur</div>
-                <div>(2017 - 2021)</div>
-            </div>
-		
-		<h2>Research Interests</h2>
-        <p>Deep Learning, Computer Vision</p>
-       
-	   <h2>Skills</h2>
-        <p>PyTorch, Python, C/C++, Java, Bash, Git</p>
-        <!-- <h2>Projects</h2>
-        
-          <ul>
-            <li>M.Tech. (R) Thesis:  Deep Generative Modeling of Human Faces for AI-based Forensic Investigation
-    </br>
-            <li>B.Tech. Major Project: Complaint Analyser using Machine Learning
-        </ul> -->
-        
-        <h2>Contact</h2>
-        <p>Reach me at s22002@students.iitmandi.ac.in</p>
+    <div class="header-container">
+        <!-- <img src="./imgs/profile_img.png" alt="Abhishek Tandon" class="profile-pic"> -->
+        <div class="header-text">
+            <h1>Abhishek Tandon</h1>
+            <div class="subtitle">M.Tech. (Research) @ IIT Mandi</div>
+            <div class="subtitle"> </div>
+        </div>
     </div>
 
-    <script>
+    <p>
+        I am a Research Scholar at MANAS Lab, Indian Institute of Technology (IIT) Mandi, Himachal Pradesh, India.
+        Currently working under the guidance of Dr. Aditya Nigam (Associate Professor, SCEE, IIT Mandi).
+    </p>
 
-    </script>
+    <h2>Education</h2>
+    <table class="news-table">
+        <tr>
+            <td>Aug'22 - Present </td>
+            <td>M.Tech. (Research), Computer Science and Engineering (Intelligent Systems)<br>Indian Institute of Technology, Mandi</td>
+        </tr>
+        <tr>
+            <td>2017 - 2021</td>
+            <td>B.Tech., Computer Science and Engineering<br>Kamla Nehru Institute of Technology, Sultanpur</td>
+        </tr>
+    </table>
+
+    <h2>Research Interests</h2>
+    <p>Deep Learning, Generative AI, Biometrics, Computer Vision</p>
+
+    <h2>Publications</h2>
+    <div class="publication">
+        <div class="pub-venue">WACVW'25</div>
+        <div class="pub-content">
+            <div class="pub-title">Generating Realistic Forehead-Creases for User Verification via Conditioned Piecewise Polynomial Curves</div>
+            <div class="pub-authors">Abhishek Tandon, Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra</div>
+            <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2501.13889">Paper</a>
+                <a href="https://github.com/abhishektandon/bspline-fc">Code</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="publication">
+        <div class="pub-venue">IJCB'24</div>
+        <div class="pub-content">
+            <div class="pub-title">Synthetic Forehead-Creases Biometric Generation for Reliable User Verification</div>
+            <div class="pub-authors">Abhishek Tandon, Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra</div>
+            <div class="pub-links">
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10744453">Paper</a>
+                <a href="https://github.com/abhishektandon/synthetic-forehead-creases">Code</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Skills</h2>
+    <p>PyTorch, Python, C/C++, Java, Bash, Git</p>
+
+    
+    <div class="social-icons">
+        <a href="mailto:s22002@students.iitmandi.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com/citations?user=0sXfNaQAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.linkedin.com/in/abhishektandon0406" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/abhi_td" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    </div>
 </body>
 </html>
