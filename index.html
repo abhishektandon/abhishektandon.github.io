@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            line-height: 1.6;
+            line-height: 1.6    ;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -64,7 +64,6 @@
         }
 
         a:hover {
-            
             color: mediumpurple;
         }
 
@@ -115,13 +114,11 @@
         .pub-venue {
             min-width: 80px;
             padding: 4px 8px;
-            /* background-color: #f1f1f1; */
             background-color: mediumpurple; 
-            /* #78ec6c */
             border-radius: 4px;
             text-align: center;
             font-size: 0.9em;
-            color:white ;
+            color: white;
             margin-top: 4px;
         }
 
@@ -136,15 +133,39 @@
 
         .pub-authors {
             color: #666;
-            margin-bottom: 0.3em;
+            margin-bottom: 0.4em;  
+            font-size: 0.95em;
         }
 
         .pub-links {
-            font-size: 0.9em;
+            font-size: 0.95em;  
         }
 
         .pub-links a {
             margin-right: 15px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .pub-links a:hover {
+            color: mediumpurple;
+        }
+        
+        .abstract-container {
+            margin: 1rem 0;
+        }
+
+        .abstract-content {
+            border-left: 3px solid lightgrey;
+            padding: 8px 16px;
+            margin-top: 8px;
+            background-color: #fafafa;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .abstract-content.hidden {
+            display: none;
         }
     </style>
 </head>
@@ -180,27 +201,27 @@
 
     <h2>Publications</h2>
     <div class="publication">
-        <!-- <div class="pub-venue"><a href="https://sites.google.com/view/synrdinbas-wacv2025" target="_blank">WACV-W'25</a></div> -->
         <div class="pub-venue">WACV-W'25</div>
         <div class="pub-content">
-            <div class="pub-title"><a href="https://openaccess.thecvf.com/content/WACV2025W/SynRDinBAS/papers/Tandon_Generating_Realistic_Forehead-Creases_for_User_Verification_via_Conditioned_Piecewise_Polynomial_WACVW_2025_paper.pdf" target="_blank">Generating Realistic Forehead-Creases for User Verification via Conditioned Piecewise Polynomial Curves</a></div>
+            <div class="pub-title"><a href="https://openaccess.thecvf.com/content/WACV2025W/SynRDinBAS/html/Tandon_Generating_Realistic_Forehead-Creases_for_User_Verification_via_Conditioned_Piecewise_Polynomial_WACVW_2025_paper.html" target="_blank">Generating Realistic Forehead-Creases for User Verification via Conditioned Piecewise Polynomial Curves</a></div>
             <div class="pub-authors">Abhishek Tandon, Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra</div>
             <div class="pub-links">
-                <!-- <a href="https://openaccess.thecvf.com/content/WACV2025W/SynRDinBAS/papers/Tandon_Generating_Realistic_Forehead-Creases_for_User_Verification_via_Conditioned_Piecewise_Polynomial_WACVW_2025_paper.pdf">Paper</a> -->
-                <!-- <a href="https://github.com/abhishektandon/bspline-fc">Code</a> -->
+                <a href="#" class="abstract-link" data-paper="wacvw-25">Abstract</a>
+                <a href="https://openaccess.thecvf.com/content/WACV2025W/SynRDinBAS/papers/Tandon_Generating_Realistic_Forehead-Creases_for_User_Verification_via_Conditioned_Piecewise_Polynomial_WACVW_2025_paper.pdf" target="_blank">Paper</a>
+                <div class="abstract-content hidden" id="wacv-abstract"></div>
             </div>
         </div>
     </div>
 
     <div class="publication">
-        <!-- <div class="pub-venue"><a href="https://ijcb2024.ieee-biometrics.org/" target="_blank">IJCB'24</a></div> -->
         <div class="pub-venue">IJCB'24</div>
         <div class="pub-content">
-            <div class="pub-title"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10744453" target="_blank">Synthetic Forehead-Creases Biometric Generation for Reliable User Verification</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10744453" target="_blank">Synthetic Forehead-Creases Biometric Generation for Reliable User Verification</a></div>
             <div class="pub-authors">Abhishek Tandon, Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra</div>
             <div class="pub-links">
-                <!-- <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10744453">Paper</a> -->
-                <!-- <a href="https://github.com/abhishektandon/synthetic-forehead-creases">Code</a> -->
+                <a href="#" class="abstract-link" data-paper="ijcb-24">Abstract</a>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10744453" target="_blank">Paper</a>
+                <div class="abstract-content hidden" id="ijcb-abstract"></div>
             </div>
         </div>
     </div>
@@ -216,5 +237,32 @@
         <a href="https://www.linkedin.com/in/abhishektandon0406" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         <a href="https://twitter.com/abhi_td" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
     </div>
+
+    <script>
+    
+        const abstracts = {
+            'wacvw-25': "We propose a trait-specific image generation method that models forehead creases geometrically using B-spline and Bézier curves. This approach ensures the realistic generation of both principal creases and non-prominent crease patterns effectively constructing detailed and authentic forehead-crease images. These geometrically rendered images serve as visual prompts for a diffusion-based Edge-to-Image translation model which generates corresponding mated samples. The resulting novel synthetic identities are then used to train a forehead-crease verification network. To enhance intra-subject diversity in the generated samples we employ two strategies: (a) perturbing the control points of B-splines under defined constraints to maintain label consistency and (b) applying image-level augmentations to the geometric visual prompts such as dropout and elastic transformations specifically tailored to crease patterns. By integrating the proposed synthetic dataset with real-world data our method significantly improves the performance of forehead-crease verification systems under a cross-database verification protocol.",
+            'ijcb-24': "Recent studies have emphasized the potential of forehead-crease patterns as an alternative for face, iris, and periocular recognition, presenting contactless and convenient solutions, particularly in situations where faces are covered by surgical masks. However, collecting forehead data presents challenges, including cost and time constraints, as developing and optimizing forehead verification methods requires a substantial number of high-quality images. To tackle these challenges, the generation of synthetic biometric data has gained traction due to its ability to protect privacy while enabling effective training of deep learning-based biometric verification methods. In this paper, we present a new framework to synthesize forehead-crease image data while maintaining important features, such as uniqueness and realism. The proposed framework consists of two main modules: a Subject-Specific Generation Module (SSGM), based on an image-to-image Brownian Bridge Diffusion Model (BBDM), which learns a one-to-many mapping between image pairs to generate identity-aware synthetic forehead creases corresponding to real subjects, and a Subject-Agnostic Generation Module (SAGM), which samples new synthetic identities with assistance from the SSGM. We evaluate the diversity and realism of the generated forehead-crease images primarily using the Fréchet Inception Distance (FID) and the Structural Similarity Index Measure (SSIM). In addition, we assess the utility of synthetically generated forehead-crease images using a forehead-crease verification system (FHCVS). The results indicate an improvement in the verification accuracy of the FHCVS by utilizing synthetic data."
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.abstract-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const paperId = e.currentTarget.getAttribute('data-paper');
+                    const contentDiv = e.currentTarget.parentNode.querySelector('.abstract-content');
+                    
+                    if (contentDiv.classList.contains('hidden')) {
+                        // Show abstract
+                        contentDiv.classList.remove('hidden');
+                        contentDiv.textContent = abstracts[paperId];
+                    } else {
+                        // Hide abstract
+                        contentDiv.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
