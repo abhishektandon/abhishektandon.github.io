@@ -8,29 +8,21 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            line-height: 1.6;
+            line-height: 1.6    ;
             max-width: 800px;
             margin: 0 auto;
-            padding: 15px;
+            padding: 20px;
             color: #000;
-            overflow-x: hidden;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 12px;
-            }
         }
 
         h1 {
-            font-size: clamp(1.8em, 5vw, 2.5em);
+            font-size: 2.5em;
             margin-bottom: 0.2em;
             color: #000;
-            word-wrap: break-word;
         }
 
         h2 {
-            font-size: clamp(1.2em, 4vw, 1.5em);
+            font-size: 1.5em;
             color: #333;
             margin-top: 1.5em;
             margin-bottom: 0.5em;
@@ -40,14 +32,13 @@
 
         .subtitle {
             color: #666;
-            font-size: clamp(1em, 3vw, 1.2em);
+            font-size: 1.2em;
             margin-bottom: 1.5em;
         }
 
         p {
             margin-bottom: 1em;
             color: #333;
-            font-size: clamp(0.95em, 2.5vw, 1em);
         }
 
         .news-table {
@@ -56,27 +47,9 @@
             margin: 1em 0;
         }
 
-        @media (max-width: 600px) {
-            .news-table, .news-table tbody, .news-table tr, .news-table td {
-                display: block;
-            }
-            
-            .news-table tr {
-                margin-bottom: 1.5em;
-            }
-
-            .news-table td:first-child {
-                width: auto;
-                padding-right: 0;
-                font-weight: 600;
-                margin-bottom: 0.3em;
-            }
-        }
-
         .news-table td {
             padding: 8px 0;
             vertical-align: top;
-            font-size: clamp(0.9em, 2.5vw, 1em);
         }
 
         .news-table td:first-child {
@@ -88,7 +61,6 @@
         a {
             color: #666;
             text-decoration: none;
-            word-break: break-word;
         }
 
         a:hover {
@@ -99,14 +71,11 @@
             margin-top: 2em;
             margin-bottom: 1em;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
         }
 
         .social-icons a {
-            font-size: clamp(20px, 4vw, 24px);
+            margin: 0 15px;
+            font-size: 24px;
             color: #666;
             transition: color 0.3s ease;
         }
@@ -117,46 +86,29 @@
         }
 
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
-        }
-
-        @media (max-width: 480px) {
-            .profile-pic {
-                width: 120px;
-                height: 120px;
-                margin-right: 15px;
-            }
+            margin-right: 30px;
         }
 
         .header-container {
             display: flex;
             align-items: center;
             margin-bottom: 2em;
-            flex-wrap: wrap;
         }
 
         .header-text {
             flex: 1;
-            min-width: 200px;
         }
 
         .publication {
             margin-bottom: 2em;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 600px) {
-            .publication {
-                flex-direction: column;
-            }
+            gap: 20px;
         }
 
         .pub-venue {
@@ -165,36 +117,32 @@
             background-color: mediumpurple; 
             border-radius: 4px;
             text-align: center;
-            font-size: clamp(0.8em, 2vw, 0.9em);
+            font-size: 0.9em;
             color: white;
             margin-top: 4px;
         }
 
         .pub-content {
             flex: 1;
-            min-width: 200px;
         }
 
         .pub-title {
             font-weight: 500;
             margin-bottom: 0.3em;
-            font-size: clamp(0.95em, 2.5vw, 1em);
         }
 
         .pub-authors {
             color: #666;
-            margin-bottom: 0.5em;  
-            font-size: clamp(0.85em, 2.3vw, 0.95em);
+            margin-bottom: 0.8em;  
+            font-size: 0.95em;
         }
 
         .pub-links {
-            font-size: clamp(0.85em, 2.3vw, 0.95em);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            font-size: 0.95em;  
         }
 
         .pub-links a {
+            margin-right: 15px;
             cursor: pointer;
             color: #666;
         }
@@ -202,10 +150,9 @@
         .pub-links a:hover {
             color: mediumpurple;
         }
-        
+
         .abstract-container {
             margin: 1rem 0;
-            width: 100%;
         }
 
         .abstract-content {
@@ -215,18 +162,10 @@
             background-color: #fafafa;
             color: #333;
             transition: all 0.3s ease;
-            font-size: clamp(0.85em, 2.3vw, 0.95em);
-            overflow-wrap: break-word;
         }
 
         .abstract-content.hidden {
             display: none;
-        }
-
-        @media (max-width: 480px) {
-            .abstract-content {
-                padding: 8px 12px;
-            }
         }
     </style>
 </head>
