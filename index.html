@@ -181,7 +181,7 @@
     </div>
 
     <p>
-        I am a Research Scholar at MANAS Lab, <a href="https://www.iitmandi.ac.in/" target="_blank">Indian Institute of Technology Mandi, Himachal Pradesh, India</a>, currently working under the guidance of <a href="https://faculty.iitmandi.ac.in/~aditya/" target="_blank">Dr. Aditya Nigam</a> (Associate Professor, <a href="https://scee.iitmandi.ac.in/" target="_blank">School of Computing and Electrical Engineering</a>, IIT Mandi)</a>. Here is my <a href="./assets/abhishektandon_cv_april25.pdf   " target="_blank">CV</a>.
+        I am a Research Scholar at MANAS Lab, <a href="https://www.iitmandi.ac.in/" target="_blank">Indian Institute of Technology Mandi, Himachal Pradesh, India</a>, currently working under the guidance of <a href="https://faculty.iitmandi.ac.in/~aditya/" target="_blank">Dr. Aditya Nigam</a> (Associate Professor, <a href="https://scee.iitmandi.ac.in/" target="_blank">School of Computing and Electrical Engineering</a>, IIT Mandi)</a>.
     </p>
 
     <h2>Education</h2>
@@ -197,9 +197,25 @@
     </table>
 
     <h2>Research Interests</h2>
-    <p>Deep Learning, Generative AI, Biometrics, Computer Vision</p>
+    <p>Deep Learning, Deep Generative Models, Biometrics, Computer Vision</p>
 
     <h2>Publications</h2>
+
+    <div class="publication">
+        <div class="pub-venue">Information <br> Fusion'25</div>
+        <div class="pub-content">
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525009613" target="_blank">CreaseGen: Generating Realistic Forehead-Creases via B-Splines, Reinforcement Learning and Diffusion Modeling</a></div>
+            <div class="pub-authors">Abhishek Tandon, Ashutosh Sharma, Geetanjali Sharma, Gaurav Jaswal, <br> Raghavendra Ramachandra, Aditya Nigam</div>
+            <div class="pub-links">
+                <a href="#" class="abstract-link" data-paper="inffus-25">Abstract</a>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525009613" target="_blank">Paper</a>
+                <!-- <a href="https://github.com/abhishektandon/bspline-fc" target="_blank">Code</a> -->
+                <div class="abstract-content hidden" id="inffus-abstract"></div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="publication">
         <div class="pub-venue">WACV-W'25</div>
         <div class="pub-content">
@@ -245,7 +261,8 @@
     
         const abstracts = {
             'wacvw-25': "We propose a trait-specific image generation method that models forehead creases geometrically using B-spline and Bézier curves. This approach ensures the realistic generation of both principal creases and non-prominent crease patterns effectively constructing detailed and authentic forehead-crease images. These geometrically rendered images serve as visual prompts for a diffusion-based Edge-to-Image translation model which generates corresponding mated samples. The resulting novel synthetic identities are then used to train a forehead-crease verification network. To enhance intra-subject diversity in the generated samples we employ two strategies: (a) perturbing the control points of B-splines under defined constraints to maintain label consistency and (b) applying image-level augmentations to the geometric visual prompts such as dropout and elastic transformations specifically tailored to crease patterns. By integrating the proposed synthetic dataset with real-world data our method significantly improves the performance of forehead-crease verification systems under a cross-database verification protocol.",
-            'ijcb-24': "Recent studies have emphasized the potential of forehead-crease patterns as an alternative for face, iris, and periocular recognition, presenting contactless and convenient solutions, particularly in situations where faces are covered by surgical masks. However, collecting forehead data presents challenges, including cost and time constraints, as developing and optimizing forehead verification methods requires a substantial number of high-quality images. To tackle these challenges, the generation of synthetic biometric data has gained traction due to its ability to protect privacy while enabling effective training of deep learning-based biometric verification methods. In this paper, we present a new framework to synthesize forehead-crease image data while maintaining important features, such as uniqueness and realism. The proposed framework consists of two main modules: a Subject-Specific Generation Module (SSGM), based on an image-to-image Brownian Bridge Diffusion Model (BBDM), which learns a one-to-many mapping between image pairs to generate identity-aware synthetic forehead creases corresponding to real subjects, and a Subject-Agnostic Generation Module (SAGM), which samples new synthetic identities with assistance from the SSGM. We evaluate the diversity and realism of the generated forehead-crease images primarily using the Fréchet Inception Distance (FID) and the Structural Similarity Index Measure (SSIM). In addition, we assess the utility of synthetically generated forehead-crease images using a forehead-crease verification system (FHCVS). The results indicate an improvement in the verification accuracy of the FHCVS by utilizing synthetic data."
+            'ijcb-24': "Recent studies have emphasized the potential of forehead-crease patterns as an alternative for face, iris, and periocular recognition, presenting contactless and convenient solutions, particularly in situations where faces are covered by surgical masks. However, collecting forehead data presents challenges, including cost and time constraints, as developing and optimizing forehead verification methods requires a substantial number of high-quality images. To tackle these challenges, the generation of synthetic biometric data has gained traction due to its ability to protect privacy while enabling effective training of deep learning-based biometric verification methods. In this paper, we present a new framework to synthesize forehead-crease image data while maintaining important features, such as uniqueness and realism. The proposed framework consists of two main modules: a Subject-Specific Generation Module (SSGM), based on an image-to-image Brownian Bridge Diffusion Model (BBDM), which learns a one-to-many mapping between image pairs to generate identity-aware synthetic forehead creases corresponding to real subjects, and a Subject-Agnostic Generation Module (SAGM), which samples new synthetic identities with assistance from the SSGM. We evaluate the diversity and realism of the generated forehead-crease images primarily using the Fréchet Inception Distance (FID) and the Structural Similarity Index Measure (SSIM). In addition, we assess the utility of synthetically generated forehead-crease images using a forehead-crease verification system (FHCVS). The results indicate an improvement in the verification accuracy of the FHCVS by utilizing synthetic data.",
+            'inffus-25': "We introduce CreaseGen, a novel trait-specific image synthesis framework for forehead-creases biometrics that integrates geometric modeling and reinforcement learning with diffusion-based generation. The method employs a hybrid geometric representation using B-spline and Bézier curves to explicitly model both prominent and subtle crease structures, ensuring anatomical plausibility and high visual fidelity. In parallel, a reinforcement learning (RL)-driven crease generator learns to stochastically synthesize authentic crease patterns by optimizing for spatial realism and identity-preserving variability. These rendered crease maps serve as structured visual prompts for a conditional diffusion model performing Edge-to-Image translation, generating high-resolution, mated synthetic samples. To promote intra-subject diversity and improve generalization, we incorporate three complementary strategies: (a) constrained perturbation of spline control points to maintain identity consistency while introducing fine-grained variability, (b) spatially aware image-level augmentations—such as dropout and elastic deformations, and (c) stochastic crease generation guided by the RL agent. The resulting synthetic identity samples are used to train a forehead-creases verification network. Extensive experiments under a cross-database verification protocol demonstrate that integrating our synthetic dataset with real-world samples significantly enhances verification performance, highlighting the effectiveness of trait-specific synthesis for underexplored biometric modalities."
         };
 
         document.addEventListener('DOMContentLoaded', () => {
